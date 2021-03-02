@@ -70,8 +70,8 @@ nav .links a:hover {
   background-size: 102%;
   background-repeat: no-repeat;
   background-position: center center;
-  width: 100vw;
   height: 60vh;
+  min-width: 1000px;
 }
 
 .hero .hero-text {
@@ -90,6 +90,7 @@ nav .links a:hover {
 
 .cta {
   height: 200px;
+  min-width: 1000px;
   background-color: white;
   position: relative;
 }
@@ -167,5 +168,136 @@ nav .links a:hover {
   color: white;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+.exp {
+  height: 100vh;
+  min-width: 1000px;
+  background: rgba(0, 0, 0, 0.37);
+  background-image: url(img/background2.jpg);
+  background-blend-mode: saturation;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.exp .exp-content {
+  height: 60%;
+  width: 60%;
+  margin: auto;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  gap: 1.5em;
+}
+
+.exp .exp-content .exp-title {
+  font-family: 'Dosis', sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.exp .exp-content .exp-desc {
+  font-family: 'Dosis', sans-serif;
+  font-size: 24px;
+}
+
+.exp .exp-content .switch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2em;
+  font-family: 'Montserrat-Regular';
+  font-size: 16px;
+  font-weight: bold;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.exp .exp-content .switch .switcher {
+  background-color: #8c8c8c;
+  width: 100px;
+  height: 35px;
+  border-radius: 17.5px;
+  cursor: pointer;
+}
+
+.exp .exp-content .switch .switcher .dot {
+  background-color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: relative;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  left: 0px;
+}
+
+.exp .exp-cards {
+  width: 60%;
+  margin: auto;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.exp .exp-cards .card {
+  width: 25%;
+  min-width: 175px;
+  height: 300px;
+  padding: 2em;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.exp .exp-cards .card:nth-child(1) {
+  background-color: #ff8fcf;
+}
+
+.exp .exp-cards .card:nth-child(2) {
+  background-color: #000034;
+}
+
+.exp .exp-cards .card:nth-child(3) {
+  background-color: #93cddc;
+}
+
+.exp .exp-cards .card:nth-child(4) {
+  background-color: #ceabff;
+}
+
+.exp .exp-cards .card .card-title {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 35px;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 25px;
+}
+
+.exp .exp-cards .card .card-content ul {
+  list-style: none;
+}
+
+.exp .exp-cards .card .card-content ul li {
+  padding-bottom: 2em;
+}
+
+.exp .exp-cards .card:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 /*# sourceMappingURL=style.css.map */
