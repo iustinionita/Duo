@@ -58,7 +58,7 @@ nav {
 
 .hero {
     background-color: rgba(0, 0, 0, 0.253);
-    background-image: url(/img/background.jpg);
+    background-image: url(img/background.jpg);
     background-blend-mode: darken;
     background-size: 102%;
     background-repeat: no-repeat;
@@ -90,7 +90,7 @@ nav {
         width: 100%;
         height: 100px;
         display: block;
-        background-image: url(/img/assets/icicles_up.png);
+        background-image: url(img/assets/icicles_up.png);
         background-size: contain;
         position: absolute;
         top: -100px;
@@ -100,7 +100,7 @@ nav {
         width: 100%;
         height: 100px;
         display: block;
-        background-image: url(/img/assets/icicles_down.png);
+        background-image: url(img/assets/icicles_down.png);
         background-size: contain;
         position: absolute;
         bottom: -100px;
