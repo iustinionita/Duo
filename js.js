@@ -68,8 +68,33 @@ window.onload = function () {
         } else if (window.scrollY << 200) {
             nav.classList.remove("nav-scroll");
         }
-    })
+    });
+
+    const scroll = document.querySelector(".scroll");
+    const scrollP = document.querySelector(".scroll > p");
+    let timer = null;
+    window.addEventListener("scroll", (e) => {
+        if (timer !== null) {
+            scroll.style.opacity = "1";
+            let percentage = Math.round(window.scrollY / (document.body.offsetHeight - window.innerHeight) * 100);
+            scrollP.innerHTML = percentage + "%";
+
+            clearTimeout(timer);
+        }
+        timer = setTimeout(function () {
+            // window.scrollY / (document.body.offsetHeight - window.innerHeight) * 100
+            scroll.style.opacity = "0";
+        }, 150);
+
+    }, false)
 }
+
+
+
+
+
+
+
 
 
 // const switcher = document.querySelector(".switcher");

@@ -13,10 +13,32 @@ body {
     width: 100%;
     // height: 150vh;
     background-color: lightgray;
-    //     background: rgba(0, 0, 0, 0.37);
-    // background-image: url(img/background2.jpg);
-    // background-blend-mode: saturation;
-    // background-size: cover;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll {
+    opacity: 0;
+    z-index: 2;
+    position: fixed;
+    right: 45px;
+    bottom: 100px;
+    width: 50px;
+    height: 50px;
+    background-color: #0fc1d0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease;
+    
+        p {
+        color: white;
+        font-family: 'Dosis', sans-serif;
+        font-weight: 600;
+        font-size: 18px;
+    }
 }
 
 nav {
@@ -197,7 +219,7 @@ nav {
 
     .exp-content {
         // background-color: rgba(250, 240, 230, 0.233);
-        height: 60%;
+        height: 50%;
         width: 60%;
         margin: auto;
         color: white;

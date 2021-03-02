@@ -14,6 +14,40 @@ body {
   background-color: lightgray;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll {
+  opacity: 0;
+  z-index: 2;
+  position: fixed;
+  right: 45px;
+  bottom: 100px;
+  width: 50px;
+  height: 50px;
+  background-color: #0fc1d0;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.scroll p {
+  color: white;
+  font-family: 'Dosis', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+}
+
 nav {
   position: absolute;
   left: 0;
@@ -209,7 +243,7 @@ nav .links a:hover {
 }
 
 .exp .exp-content {
-  height: 60%;
+  height: 50%;
   width: 60%;
   margin: auto;
   color: white;
