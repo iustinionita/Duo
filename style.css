@@ -1,12 +1,95 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap");
+.nav-scroll {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: 1;
+  -webkit-box-shadow: 0px 0px 2px 0px grey;
+          box-shadow: 0px 0px 2px 0px grey;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.nav-scroll .logo {
+  opacity: 1;
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.nav-scroll .links a {
+  color: black;
+}
+
+.nav-scroll .links a:hover {
+  border-bottom: 4px solid black;
+}
+
+.fancy {
+  min-height: 200px;
+  min-width: 1000px;
+  background-color: white;
+  position: relative;
+}
+
+.fancy::before {
+  content: " ";
+  width: 100%;
+  height: 100px;
+  display: block;
+  background-image: url(img/assets/icicles_up.png);
+  background-size: contain;
+  position: absolute;
+  top: -100px;
+}
+
+.fancy::after {
+  content: " ";
+  width: 100%;
+  height: 100px;
+  display: block;
+  background-image: url(img/assets/icicles_down.png);
+  background-size: contain;
+  position: absolute;
+  bottom: -100px;
+}
+
+.title-grey {
+  font-family: 'Dosis', sans-serif;
+  font-size: 40px;
+  text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+  font-weight: 600;
+  color: #8c8c8c;
+}
+
+.subtitle-grey {
+  font-family: 'Dosis', sans-serif;
+  color: black;
+  font-size: 24px;
+}
+
+.title-white {
+  font-family: 'Dosis', sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.subtitle-white {
+  font-family: 'Dosis', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -99,32 +182,6 @@ nav .links a:hover {
   border-bottom: 4px solid white;
 }
 
-.nav-scroll {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: white;
-  z-index: 1;
-  -webkit-box-shadow: 0px 0px 2px 0px grey;
-          box-shadow: 0px 0px 2px 0px grey;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
-}
-
-.nav-scroll .logo {
-  opacity: 1;
-  pointer-events: all;
-  cursor: pointer;
-}
-
-.nav-scroll .links a {
-  color: black;
-}
-
-.nav-scroll .links a:hover {
-  border-bottom: 4px solid black;
-}
-
 .hero {
   background-color: rgba(0, 0, 0, 0.253);
   background-image: url(img/background.jpg);
@@ -150,35 +207,6 @@ nav .links a:hover {
   text-align: center;
 }
 
-.fancy {
-  min-height: 200px;
-  min-width: 1000px;
-  background-color: white;
-  position: relative;
-}
-
-.fancy::before {
-  content: " ";
-  width: 100%;
-  height: 100px;
-  display: block;
-  background-image: url(img/assets/icicles_up.png);
-  background-size: contain;
-  position: absolute;
-  top: -100px;
-}
-
-.fancy::after {
-  content: " ";
-  width: 100%;
-  height: 100px;
-  display: block;
-  background-image: url(img/assets/icicles_down.png);
-  background-size: contain;
-  position: absolute;
-  bottom: -100px;
-}
-
 .cta .cta-content {
   height: 100%;
   margin: auto;
@@ -196,20 +224,6 @@ nav .links a:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 1.5em;
-}
-
-.cta .cta-content h2 {
-  font-family: 'Dosis', sans-serif;
-  font-size: 40px;
-  text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
-  font-weight: 600;
-  color: #8c8c8c;
-}
-
-.cta .cta-content h3 {
-  font-family: 'Dosis', sans-serif;
-  color: black;
-  font-size: 24px;
 }
 
 .cta .cta-content a {
@@ -262,18 +276,6 @@ nav .links a:hover {
           align-items: center;
   text-align: center;
   gap: 1.5em;
-}
-
-.exp .exp-content .exp-title {
-  font-family: 'Dosis', sans-serif;
-  font-weight: 600;
-  font-size: 40px;
-  text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
-}
-
-.exp .exp-content .exp-desc {
-  font-family: 'Dosis', sans-serif;
-  font-size: 24px;
 }
 
 .exp .exp-content .switch {
@@ -397,5 +399,52 @@ nav .links a:hover {
 .exp .exp-cards .card:hover {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.partners {
+  text-align: center;
+}
+
+.partners h3 {
+  font-weight: 200;
+}
+
+.partners .part-container {
+  padding-top: 50px;
+  width: 100%;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.partners .part-container .part {
+  width: 250px;
+  height: 150px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.partners .part-container .part:hover {
+  -webkit-box-shadow: 0px 5px 15px 0px rgba(128, 128, 128, 0.3);
+          box-shadow: 0px 5px 15px 0px rgba(128, 128, 128, 0.3);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.partners .part-container .part img {
+  max-height: 250px;
+  max-width: 250px;
+  padding: 15px;
 }
 /*# sourceMappingURL=style.css.map */
