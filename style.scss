@@ -65,7 +65,8 @@ nav {
     }
     
     .links {
-        margin-left: calc(25% + 5em);
+        // margin-left: calc(25% + 5em);
+        margin: auto;
         display: flex;
         flex-wrap: nowrap;
         height: 30px;
@@ -120,24 +121,6 @@ nav {
         justify-content: center;
         flex-direction: column;
         gap: 1.5em;
-
-        a {
-            border: 2px solid #606060;
-            padding: 10px 30px;
-            font-family: 'Bebas Neue', cursive;
-            color:#606060;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 20px;
-            transition: all .2s;
-
-            &:hover {
-                border: 2px solid #0fc1d0;
-                background-color: #0fc1d0;
-                color: white;
-                transform: scale(1.1);
-            }
-        }
     }
 }
 
@@ -272,6 +255,7 @@ nav {
 
 .partners {
     text-align: center;
+    padding-bottom: 50px;
 
     h3 {
         font-weight: 200;
@@ -309,4 +293,136 @@ nav {
         }
     }
 }
+
+.reviews {
+    width: 100%;
+    min-width: 1000px;
+    padding-bottom: 50px;
+    // height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    background-image: url(img/background3.jpg);
+    background-blend-mode: saturation;
+    background-size: cover;
+    background-attachment: fixed;
+
+    h2 {
+        padding-top: 150px;
+    }
+    h2, h3 {
+        text-align: center;
+    }
+
+    .reviews-container {
+        // width: 80%;
+        margin: 70px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        // gap: 10px;
+
+        .review {
+            width: 80%;
+            min-height: 200px;
+            min-width: 750px;
+            background-color: rgba(255, 255, 255, 0.95);
+            margin: 10px auto;
+            border-radius: 5px;
+
+            .reviewer-name {
+                font-family: 'Dosis', sans-serif;
+                font-size: 1.3em;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.team {
+    height: 100vh;
+    text-align: center;
+
+    .members {
+        width: 80%;
+        margin: 100px auto;
+        // background-color: lightcoral;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+    .member {
+        // width: 30%;
+        min-width: 400px;
+        height: 250px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        transform-style: preserve-3d;
+        
+
+        &:hover {
+            box-shadow: 0px 5px 15px 0px rgba(128, 128, 128, 0.3);
+            transition: all 0.2s linear;
+        }
+        &:hover .m-pic {
+            width: 100px;
+            transform: translateX(-130px) translateY(-30px) translateZ(20px);
+            transition: all 0.2s linear;
+        } 
+        &:hover .m-name {
+            transform: translateX(50px) translateY(-100px) translateZ(20px);;
+            transition: all 0.2s linear;
+        }
+        &:hover .m-title {
+            transform: translateX(50px) translateY(-100px) translateZ(20px);;
+            transition: all 0.2s linear 0.1s;
+        }
+        &:hover .m-desc {
+            opacity: 1;
+            transform: translateY(60px) translateZ(20px);
+            transition: all 0.2s linear 0.3s;
+        }
+
+        .m-pic {
+            width: 150px;
+            position: relative;
+            transition: all 0.3s linear;
+            
+            img {
+                width: 100%;
+                border-radius: 50%;
+            }
+        }
+
+        .m-name {
+            font-family: 'Dosis', sans-serif;
+            font-weight: bold;
+            font-size: 24px;
+            position: relative;
+            transition: all 0.2s linear;
+        }
+
+        .m-title {
+            font-family: 'Montserrat', sans-serif;
+            position: relative;
+            transition: all 0.2s linear 0.1s;
+        }
+        .m-desc {
+            width: 80%;
+            position: absolute;
+            opacity: 0;
+            text-align: left;
+            transition: all 0.2s linear -0.15s;
+            // background-color: lightcyan;
+        }
+    }
+}
+}
+
+
 

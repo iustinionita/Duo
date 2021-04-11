@@ -75,12 +75,34 @@
   font-weight: 600;
   font-size: 40px;
   text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+  color: white;
 }
 
 .subtitle-white {
   font-family: 'Dosis', sans-serif;
   font-size: 24px;
   font-weight: 400;
+  color: white;
+}
+
+.a-link {
+  border: 2px solid #606060;
+  padding: 10px 30px;
+  font-family: 'Bebas Neue', cursive;
+  color: #606060;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.a-link:hover {
+  border: 2px solid #0fc1d0;
+  background-color: #0fc1d0;
+  color: white;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 * {
@@ -158,7 +180,7 @@ nav .logo img {
 }
 
 nav .links {
-  margin-left: calc(25% + 5em);
+  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -224,26 +246,6 @@ nav .links a:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 1.5em;
-}
-
-.cta .cta-content a {
-  border: 2px solid #606060;
-  padding: 10px 30px;
-  font-family: 'Bebas Neue', cursive;
-  color: #606060;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 20px;
-  -webkit-transition: all .2s;
-  transition: all .2s;
-}
-
-.cta .cta-content a:hover {
-  border: 2px solid #0fc1d0;
-  background-color: #0fc1d0;
-  color: white;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
 }
 
 .exp {
@@ -403,6 +405,7 @@ nav .links a:hover {
 
 .partners {
   text-align: center;
+  padding-bottom: 50px;
 }
 
 .partners h3 {
@@ -446,5 +449,174 @@ nav .links a:hover {
   max-height: 250px;
   max-width: 250px;
   padding: 15px;
+}
+
+.reviews {
+  width: 100%;
+  min-width: 1000px;
+  padding-bottom: 50px;
+  background: rgba(0, 0, 0, 0.5);
+  background-image: url(img/background3.jpg);
+  background-blend-mode: saturation;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.reviews h2 {
+  padding-top: 150px;
+}
+
+.reviews h2, .reviews h3 {
+  text-align: center;
+}
+
+.reviews .reviews-container {
+  margin: 70px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.reviews .reviews-container .review {
+  width: 80%;
+  min-height: 200px;
+  min-width: 750px;
+  background-color: rgba(255, 255, 255, 0.95);
+  margin: 10px auto;
+  border-radius: 5px;
+}
+
+.reviews .reviews-container .review .reviewer-name {
+  font-family: 'Dosis', sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.team {
+  height: 100vh;
+  text-align: center;
+}
+
+.team .members {
+  width: 80%;
+  margin: 100px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+}
+
+.team .members .member {
+  min-width: 400px;
+  height: 250px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.team .members .member:hover {
+  -webkit-box-shadow: 0px 5px 15px 0px rgba(128, 128, 128, 0.3);
+          box-shadow: 0px 5px 15px 0px rgba(128, 128, 128, 0.3);
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.team .members .member:hover .m-pic {
+  width: 100px;
+  -webkit-transform: translateX(-130px) translateY(-30px) translateZ(20px);
+          transform: translateX(-130px) translateY(-30px) translateZ(20px);
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.team .members .member:hover .m-name {
+  -webkit-transform: translateX(50px) translateY(-100px) translateZ(20px);
+          transform: translateX(50px) translateY(-100px) translateZ(20px);
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.team .members .member:hover .m-title {
+  -webkit-transform: translateX(50px) translateY(-100px) translateZ(20px);
+          transform: translateX(50px) translateY(-100px) translateZ(20px);
+  -webkit-transition: all 0.2s linear 0.1s;
+  transition: all 0.2s linear 0.1s;
+}
+
+.team .members .member:hover .m-desc {
+  opacity: 1;
+  -webkit-transform: translateY(60px) translateZ(20px);
+          transform: translateY(60px) translateZ(20px);
+  -webkit-transition: all 0.2s linear 0.3s;
+  transition: all 0.2s linear 0.3s;
+}
+
+.team .members .member .m-pic {
+  width: 150px;
+  position: relative;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.team .members .member .m-pic img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.team .members .member .m-name {
+  font-family: 'Dosis', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  position: relative;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.team .members .member .m-title {
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  -webkit-transition: all 0.2s linear 0.1s;
+  transition: all 0.2s linear 0.1s;
+}
+
+.team .members .member .m-desc {
+  width: 80%;
+  position: absolute;
+  opacity: 0;
+  text-align: left;
+  -webkit-transition: all 0.2s linear -0.15s;
+  transition: all 0.2s linear -0.15s;
 }
 /*# sourceMappingURL=style.css.map */
