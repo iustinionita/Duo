@@ -451,60 +451,19 @@ nav .links a:hover {
   padding: 15px;
 }
 
-.reviews {
-  width: 100%;
-  min-width: 1000px;
-  padding-bottom: 50px;
+.team {
+  text-align: center;
+  padding-bottom: 10px;
   background: rgba(0, 0, 0, 0.5);
   background-image: url(img/background3.jpg);
   background-blend-mode: saturation;
   background-size: cover;
   background-attachment: fixed;
+  color: white;
 }
 
-.reviews h2 {
+.team .team-title {
   padding-top: 150px;
-}
-
-.reviews h2, .reviews h3 {
-  text-align: center;
-}
-
-.reviews .reviews-container {
-  margin: 70px auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.reviews .reviews-container .review {
-  width: 80%;
-  min-height: 200px;
-  min-width: 750px;
-  background-color: rgba(255, 255, 255, 0.95);
-  margin: 10px auto;
-  border-radius: 5px;
-}
-
-.reviews .reviews-container .review .reviewer-name {
-  font-family: 'Dosis', sans-serif;
-  font-size: 1.3em;
-  font-weight: bold;
-}
-
-.team {
-  height: 100vh;
-  text-align: center;
 }
 
 .team .members {
@@ -549,8 +508,11 @@ nav .links a:hover {
 .team .members .member:hover {
   -webkit-box-shadow: 0px 5px 15px 0px rgba(128, 128, 128, 0.3);
           box-shadow: 0px 5px 15px 0px rgba(128, 128, 128, 0.3);
+  background-color: rgba(255, 255, 255, 0.25);
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }
 
 .team .members .member:hover .m-pic {
@@ -618,5 +580,47 @@ nav .links a:hover {
   text-align: left;
   -webkit-transition: all 0.2s linear -0.15s;
   transition: all 0.2s linear -0.15s;
+}
+
+.reviews {
+  width: 100%;
+  min-width: 1000px;
+  padding-bottom: 50px;
+}
+
+.reviews h2, .reviews h3 {
+  text-align: center;
+}
+
+.reviews .reviews-container {
+  margin: 70px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.reviews .reviews-container .review {
+  width: 80%;
+  min-height: 200px;
+  min-width: 750px;
+  background-color: rgba(255, 255, 255, 0.95);
+  margin: 10px auto;
+  border-radius: 5px;
+}
+
+.reviews .reviews-container .review .reviewer-name {
+  font-family: 'Dosis', sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
 }
 /*# sourceMappingURL=style.css.map */

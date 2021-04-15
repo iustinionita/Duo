@@ -87,6 +87,8 @@ window.onload = function () {
         }, 150);
 
     }, false);
+
+
 };
 
     // ANIMATIONS

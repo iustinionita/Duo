@@ -294,53 +294,20 @@ nav {
     }
 }
 
-.reviews {
-    width: 100%;
-    min-width: 1000px;
-    padding-bottom: 50px;
+.team {
     // height: 100vh;
+    text-align: center;
+    padding-bottom: 10px;
     background: rgba(0, 0, 0, 0.5);
     background-image: url(img/background3.jpg);
     background-blend-mode: saturation;
     background-size: cover;
     background-attachment: fixed;
+    color: white;
 
-    h2 {
+    .team-title {
         padding-top: 150px;
     }
-    h2, h3 {
-        text-align: center;
-    }
-
-    .reviews-container {
-        // width: 80%;
-        margin: 70px auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        // gap: 10px;
-
-        .review {
-            width: 80%;
-            min-height: 200px;
-            min-width: 750px;
-            background-color: rgba(255, 255, 255, 0.95);
-            margin: 10px auto;
-            border-radius: 5px;
-
-            .reviewer-name {
-                font-family: 'Dosis', sans-serif;
-                font-size: 1.3em;
-                font-weight: bold;
-            }
-        }
-    }
-}
-
-.team {
-    height: 100vh;
-    text-align: center;
 
     .members {
         width: 80%;
@@ -367,7 +334,9 @@ nav {
 
         &:hover {
             box-shadow: 0px 5px 15px 0px rgba(128, 128, 128, 0.3);
+            background-color:  rgba(255, 255, 255, 0.25);
             transition: all 0.2s linear;
+            backdrop-filter: blur(5px);
         }
         &:hover .m-pic {
             width: 100px;
@@ -424,5 +393,43 @@ nav {
 }
 }
 
+.reviews {
+    width: 100%;
+    min-width: 1000px;
+    padding-bottom: 50px;
+    // height: 100vh;
+    
 
+    h2 {
+        // padding-top: 150px;
+    }
+    h2, h3 {
+        text-align: center;
+    }
+
+    .reviews-container {
+        // width: 80%;
+        margin: 70px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        // gap: 10px;
+
+        .review {
+            width: 80%;
+            min-height: 200px;
+            min-width: 750px;
+            background-color: rgba(255, 255, 255, 0.95);
+            margin: 10px auto;
+            border-radius: 5px;
+
+            .reviewer-name {
+                font-family: 'Dosis', sans-serif;
+                font-size: 1.3em;
+                font-weight: bold;
+            }
+        }
+    }
+}
 
