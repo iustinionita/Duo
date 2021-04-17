@@ -20,6 +20,49 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #242f3f;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+
+    .loader {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        border: 4px solid #Fff;
+        animation: loader 2s infinite ease;
+      }
+      .loader-inner {
+        vertical-align: top;
+        display: inline-block;
+        width: 100%;
+        background-color: #fff;
+        animation: loader-inner 2s infinite ease-in;
+      }
+      @keyframes loader {
+        0% { transform: rotate(0deg);}
+        25% { transform: rotate(180deg);}
+        50% { transform: rotate(180deg);}
+        75% { transform: rotate(360deg);}
+        100% { transform: rotate(360deg);}
+      }
+      @keyframes loader-inner {
+        0% { height: 0%;}
+        25% { height: 0%;}
+        50% { height: 100%;}
+        75% { height: 100%;}
+        100% { height: 0%;}
+      }
+  }
+
 .scroll {
     opacity: 0;
     z-index: 2;
@@ -94,19 +137,23 @@ nav {
     background-size: 102%;
     background-repeat: no-repeat;
     background-position: center center;
-    height: 60vh;
+    min-height: 600px;
+    height: 40vh;
     min-width: 1000px;
+    // width: 100%;
+    // padding-bottom: 100px;  
 
     .hero-text {
         width: 50vw;
         margin: auto;
         position: relative;
         top: 40%;
+        pointer-events: none;
         h1 {
             font-family: 'Bebas Neue', cursive;
             font-size: 45px;
             color: white;
-            text-align: center;            
+            text-align: center;    
         }
     }
 }
@@ -131,6 +178,7 @@ nav {
     background-image: url(img/background2.jpg);
     background-blend-mode: saturation;
     background-size: cover;
+    background-position: top center;
     background-attachment: fixed;
 
     .exp-content {
@@ -182,7 +230,7 @@ nav {
 
     // CARDS
     .exp-cards {
-        width: 60%;
+        width: 80%;
         margin: auto;
         color: white;
         display: flex;
@@ -295,7 +343,8 @@ nav {
 }
 
 .team {
-    // height: 100vh;
+    width: 100%;
+    min-width: 1000px;
     text-align: center;
     padding-bottom: 10px;
     background: rgba(0, 0, 0, 0.5);
@@ -433,3 +482,35 @@ nav {
     }
 }
 
+// MEDIA 1080
+
+@media only screen and (max-width: 1080px) {
+    nav {
+        display: none;
+        //de introdus burger menu
+    }
+    .hero {
+        background-size: 110%;
+        height: 40vh;
+        min-height: 400px;
+        .hero-text {
+            h1 {
+                font-size: 35px;
+            }
+        }
+    }
+    .exp {
+        min-height: 800px;
+        height: 70vh;
+    }
+    .team {
+        .members {
+            width: 100%;
+        }
+    }
+    .partners {
+        .part-container {
+            height: 150px;
+        }
+    }
+}

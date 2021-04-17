@@ -1,13 +1,18 @@
 window.onload = function () {
 
+    // LOADER
+
+    $(".loader-wrapper").fadeOut("slow");
+
+
     // HERO PARRALAX EFFECT
 
     const hero = document.querySelector(".hero");
 
     hero.addEventListener("mousemove", (e) => {
         // Seteaza intensitatea miscarii
-        let offsetX = -e.offsetX / 100;
-        hero.style.transition = "all .3s linear";
+        let offsetX = -e.offsetX / 120;
+        hero.style.transition = "all linear";
         hero.style.backgroundPositionX = offsetX + "px";
 
     });
@@ -87,6 +92,21 @@ window.onload = function () {
         }, 150);
 
     }, false);
+
+    // Dezactivare tilt in mobile mode
+
+    function destroyTilt() {
+        var tiltElements = document.querySelectorAll(`[data-tilt]`);
+        var mq = window.matchMedia("(max-width: 1080px)");
+        if (mq.matches) {
+            for (var i = 0, len = tiltElements.length; i < len; i++) {
+                tiltElements[i].vanillaTilt.destroy();
+            }
+        } else {
+            console.log('pedal');
+        }
+    }
+    destroyTilt();
 
 
 };
